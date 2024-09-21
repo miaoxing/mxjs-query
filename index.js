@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 import $ from 'miaoxing';
+import useMutation from './use-mutation';
 
 const useQuery = (key, config) => {
   const result = useSWR(key, async () => {
@@ -26,4 +27,4 @@ const useQuery = (key, config) => {
   return { ...result, data };
 };
 
-export { useQuery };
+export { useQuery, useMutation };
