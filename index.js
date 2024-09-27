@@ -17,7 +17,10 @@ const useQuery = (key, config) => {
     config?.onLoad && await config.onLoad(ret);
 
     return ret;
-  }, config);
+  }, {
+    revalidateOnFocus: false,
+    ...config
+  });
 
   // 增加 ret 键名，方便调用
   result.ret = result.data;
