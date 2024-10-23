@@ -5,7 +5,13 @@ import { useRef } from 'react';
 
 const useQuery = (key, config) => {
   const result = useSWR(key, async () => {
-    const res = await $.http(key);
+    // 默认由 $.http 处理加载和错误
+    const httpConfig = typeof key === 'string' ? { url: key } : key;
+    if (httpConfig.suspense !== false && config?.suspense !== true) {
+      httpConfig.suspense = true;
+    }
+
+    const res = await $.http(httpConfig);
 
     const ret = res.ret;
     if (ret.isErr()) {
