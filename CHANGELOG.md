@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/miaoxing/mxjs-query/compare/v1.2.0...v1.3.0) (2024-11-01)
+
+
+### Features
+
+* **query:** `useQuery` 增加  `promise` 选项，方便和其他数据交互 ([a0340a6](https://github.com/miaoxing/mxjs-query/commit/a0340a68daaa0c0e48606fd6b766a16e72c664b1))
+* **query:** 默认由 `$.http` 处理加载和错误 ([ec9a30c](https://github.com/miaoxing/mxjs-query/commit/ec9a30c8ac19d8c5b5cb4516867487c427ec0cf7))
+
 # [1.2.0](https://github.com/miaoxing/mxjs-query/compare/v1.1.3...v1.2.0) (2024-09-30)
 
 
