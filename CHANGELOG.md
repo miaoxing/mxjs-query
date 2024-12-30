@@ -1,3 +1,13 @@
+## [1.3.1](https://github.com/miaoxing/mxjs-query/compare/v1.3.0...v1.3.1) (2024-12-30)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+
 # [1.3.0](https://github.com/miaoxing/mxjs-query/compare/v1.2.0...v1.3.0) (2024-11-01)
 
 
