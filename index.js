@@ -1,7 +1,6 @@
 import useSWR from 'swr';
 import $ from 'miaoxing';
 import useMutation from './use-mutation';
-import { useRef } from 'react';
 
 const useQuery = (key, config) => {
   const result = useSWR(key, async () => {
@@ -32,20 +31,6 @@ const useQuery = (key, config) => {
   // 增加 ret 键名，方便调用
   result.ret = result.data;
   const data = result.ret?.data;
-
-  if (config?.promise) {
-    const ref = useRef();
-    if (!ref.current) {
-      ref.current = Promise.withResolvers();
-    }
-    result.promise = ref.current.promise;
-
-    if (result.error) {
-      ref.current.reject(result.error);
-    } else if (result.data) {
-      ref.current.resolve(data);
-    }
-  }
 
   // 更换 data 为接口的 data
   return { ...result, data };
